@@ -20,6 +20,7 @@ SOURCES += \
     mainscene.cpp
 
 HEADERS += \
+    config.h \
     mainscene.h
 
 FORMS += \
