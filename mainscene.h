@@ -15,6 +15,9 @@ public:
     MainScene(QWidget *parent = nullptr);
     ~MainScene();
 
+    //初始化场景
+    void initScene();
+
 private:
     Ui::MainScene *ui;
 };
