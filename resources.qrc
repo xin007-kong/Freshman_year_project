@@ -1,0 +1,10 @@
+<RCC>
+    <qresource prefix="/submarine">
+        <file>resources_for_project/sub1.png</file>
+        <file>resources_for_project/submarine-2030658_640.png</file>
+    </qresource>
+    <qresource prefix="/background">
+        <file>resources_for_project/background1.jpg</file>
+        <file>resources_for_project/background2.jpg</file>
+    </qresource>
+</RCC>

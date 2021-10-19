@@ -1,6 +1,7 @@
 #include "mainscene.h"
 #include "ui_mainscene.h"
 #include "config.h"
+#include <QIcon>
 MainScene::MainScene(QWidget *parent)
     : QWidget(parent)
     , ui(new Ui::MainScene)
@@ -21,5 +22,8 @@ void MainScene::initScene()
 
     //设置标题
     setWindowTitle(GAME_TITLE);
+
+    //加载图标
+    setWindowIcon(QIcon(GAME_ICON));
 }
 
