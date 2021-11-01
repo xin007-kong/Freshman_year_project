@@ -17,11 +17,15 @@ DEFINES += QT_DEPRECATED_WARNINGS
 
 SOURCES += \
     main.cpp \
-    mainscene.cpp
+    mainscene.cpp \
+    map.cpp \
+    player.cpp
 
 HEADERS += \
     config.h \
-    mainscene.h
+    mainscene.h \
+    map.h \
+    player.h
 
 FORMS += \
     mainscene.ui
