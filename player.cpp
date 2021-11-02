@@ -25,5 +25,36 @@ void Player::setPosition(int x, int y)
 void Player::shoot()
 {
 
+    //累加时间间隔记录变量
+    m_recorder++;
+    //判断如果记录数字 未达到发射间隔，直接return
+    if(m_recorder < BULLET_INTERVAL)
+    {
+    return;
+    }
+    //到达发射时间处理
+    //重置发射时间间隔记录
+    m_recorder = 0;
+
+    //发射子弹
+    for(int i=0;i<BULLET_NUM;i++)
+    {
+        //遍历数组,如果是空闲的子弹，进行发射
+        if(m_bullets[i].m_Free==true)
+        {
+            //将空闲状态改为假
+            m_bullets[i].m_Free=false;
+            //设置子弹坐标   等于飞机的位置
+            m_bullets[i].m_X=m_X+ m_Rect.width()*0.7+ 30;
+            m_bullets[i].m_Y=m_Y+60;
+            //发射了一发就退出循环
+            break;
+
+
+        }
+    }
+
+
+
 }
 

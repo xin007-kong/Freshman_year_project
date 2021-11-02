@@ -5,6 +5,7 @@
 #include <QTimer>
 #include <map.h>
 #include <player.h>
+#include "bullet.h"
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainScene; }
 QT_END_NAMESPACE
@@ -41,6 +42,9 @@ public:
 
     //定时器
     QTimer m_Timer;
+
+
+
 
 private:
     Ui::MainScene *ui;

@@ -63,6 +63,19 @@ void MainScene::updatePositon()
 {
     //更新地图坐标
     m_map.mapPosition();
+
+    //发射子弹
+    m_sub.shoot();
+
+    //计算所有非空闲子弹的当前坐标
+    for(int i=0;i<BULLET_NUM;i++)
+    {
+        //如果非空闲，计算发射位置
+        if(m_sub.m_bullets[i].m_Free==false)
+        {
+            m_sub.m_bullets[i].updatePosition();
+        }
+    }
 }
 
 void MainScene::paintEvent(QPaintEvent *)
@@ -76,6 +89,16 @@ void MainScene::paintEvent(QPaintEvent *)
     painter.drawPixmap(m_map.m_map2_posX,0,m_map.m_map2);
     //绘制玩家潜艇
     painter.drawPixmap(m_sub.m_X,m_sub.m_Y,m_sub.m_submarine);//第三个参数是要显示的图片
+
+    //绘制武器
+    for(int i = 0 ;i < BULLET_NUM;i++)
+    {
+    //如果武器状态为非空闲，计算发射位置
+     if(!m_sub.m_bullets[i].m_Free)
+     {
+         painter.drawPixmap(m_sub.m_bullets[i].m_X,m_sub.m_bullets[i].m_Y,m_sub.m_bullets[i].m_Bullet);
+     }
+    }
 
 }
 

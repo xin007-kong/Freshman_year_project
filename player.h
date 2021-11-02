@@ -2,7 +2,7 @@
 #define PLAYER_H
 #include <QPixmap>
 #include <QRect>
-
+#include "bullet.h"
 class Player
 {
 public:
@@ -19,6 +19,11 @@ public:
     int m_Y;
     //玩家的矩形边框
     QRect m_Rect;
+
+    //弹匣
+    Bullet m_bullets[BULLET_NUM];
+    //发射间隔记录
+    int m_recorder;
 
 };
 
