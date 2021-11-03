@@ -3,7 +3,10 @@
 Bullet::Bullet()
 {
     //加载子弹资源
-    m_Bullet.load(BULLET_PATH1);
+    //武器类型(武器的图片路径)
+//    QString PATH;
+    QString PATH = BULLET_PATH1;
+    m_Bullet.load(PATH);
 
     //子弹坐标
     m_X =0;

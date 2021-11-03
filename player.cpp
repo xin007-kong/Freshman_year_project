@@ -9,6 +9,10 @@ Player::Player()
     m_X=0;
     m_Y=(GAME_HEIGHT-m_submarine.height())*0.5;
     //初始化矩形边框
+
+    //初始化技能点
+    skill = 20;
+
     //矩形框四个属性:长宽 ,横纵坐标
     m_Rect.setWidth(m_submarine.width());
     m_Rect.setHeight(m_submarine.height());

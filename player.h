@@ -25,6 +25,8 @@ public:
     //发射间隔记录
     int m_recorder;
 
+    double skill; //技能值
+
 };
 
 #endif // PLAYER_H

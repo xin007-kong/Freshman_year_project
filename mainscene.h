@@ -3,9 +3,11 @@
 
 #include <QWidget>
 #include <QTimer>
-#include <map.h>
-#include <player.h>
+#include "map.h"
+#include "player.h"
 #include "bullet.h"
+#include "enemy.h"
+#include "bomb.h"
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainScene; }
 QT_END_NAMESPACE
@@ -43,6 +45,21 @@ public:
     //定时器
     QTimer m_Timer;
 
+
+    //爆炸数组
+    Bomb m_bombs[BOMB_NUM];
+
+//    //子弹资源对象
+//    QPixmap m_Bullet;
+    //敌方出场
+    void enemyToScene();
+    //敌机数组
+    Enemy m_enemys[ENEMY_NUM];
+    //敌机出场间隔记录
+    int m_recorder;
+
+    //碰撞检测
+    void collisionDetection();
 
 
 
